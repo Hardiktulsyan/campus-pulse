@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://docs.google.com https://*.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Every Bennett University club event in one place, with the time and the room.">
+  <meta name="theme-color" content="#3E2A1E">
+  <title>Events | Campus Pulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.intro { display: none; }</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__mask"><span class="intro__word">Campus Pulse</span></div>
+    <p class="intro__sub">Every club event at Bennett, in one place.</p>
+  </div>
+
+  <div class="wipe" id="wipe" aria-hidden="true"><span class="wipe__label" id="wipe-label"></span></div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#/">
+        <span class="brand__name">Campus Pulse</span>
+        <span class="brand__sub">Bennett University</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#/" data-nav="events">Events</a>
+        <a href="#/clubs" data-nav="clubs">Clubs</a>
+        <a href="#/schedule" data-nav="schedule">My schedule <span class="badge js-saved-badge" hidden>0</span></a>
+        <span class="nav-indicator" aria-hidden="true"></span>
+      </nav>
+      <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="drawer">Menu</button>
+    </div>
+    <div class="drawer" id="drawer">
+      <div class="drawer__inner">
+        <a href="#/" data-nav="events">Events</a>
+        <a href="#/clubs" data-nav="clubs">Clubs</a>
+        <a href="#/schedule" data-nav="schedule">My schedule <span class="badge js-saved-badge" hidden>0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="view"></div>
+  </main>
+
+  <div class="panel-root" id="panel-root" hidden>
+    <div class="backdrop" id="panel-backdrop"></div>
+    <aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" tabindex="-1">
+      <div id="panel-content"></div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__name">Campus Pulse</p>
+        <p>Bennett University, Greater Noida</p>
+      </div>
+      <p>Events are posted by club coordinators. If something looks wrong, use the contact on the event page.</p>
+    </div>
+  </footer>
+
+  <script src="data/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
